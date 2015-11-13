@@ -72,6 +72,10 @@ dependencies {
     testRuntime 'org.seleniumhq.selenium:selenium-htmlunit-driver:2.44.0'
 
     console "org.grails:grails-console"
+
+    // These two lines cause a 'No Session found in current thread' HibernateError
+    compile "org.jadira.usertype:usertype.extended:4.0.0.GA"
+    compile "org.hibernate:hibernate-entitymanager"
 }
 
 task wrapper(type: Wrapper) {
