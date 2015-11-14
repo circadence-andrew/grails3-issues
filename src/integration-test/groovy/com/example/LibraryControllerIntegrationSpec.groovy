@@ -7,7 +7,7 @@ import spock.lang.*
 
 @Integration
 @Rollback
-class LibraryControllerSpec extends Specification {
+class LibraryControllerIntegrationSpec extends Specification {
 
   def library
 
