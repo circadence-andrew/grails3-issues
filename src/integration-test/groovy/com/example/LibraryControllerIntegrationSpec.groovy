@@ -7,7 +7,7 @@ import spock.lang.*
 
 @Integration
 @Rollback
-class LibraryControllerSpec extends Specification {
+class LibraryControllerIntegrationSpec extends Specification {
 
   def library
 
@@ -18,8 +18,10 @@ class LibraryControllerSpec extends Specification {
   }
 
   def setupData() {
-    library = new Library(name: 'library')
-    library.save(flush: true, failOnError: true)
+    Library.withNewSession {
+      library = new Library(name: 'library')
+      library.save(flush: true, failOnError: true)
+    }
   }
 
   // This test fails with a 'No Session found in current thread'
