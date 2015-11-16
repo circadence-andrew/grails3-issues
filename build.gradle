@@ -76,6 +76,8 @@ dependencies {
     // These two lines cause a 'No Session found in current thread' HibernateError
     compile "org.jadira.usertype:usertype.extended:4.0.0.GA"
     compile "org.hibernate:hibernate-entitymanager"
+
+    compile "org.grails.plugins:spring-security-core:3.0.0.M1"
 }
 
 task wrapper(type: Wrapper) {
